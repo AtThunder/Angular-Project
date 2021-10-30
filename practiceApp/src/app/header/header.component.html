@@ -1,0 +1,46 @@
+<mat-toolbar color="primary">
+  <span
+    routerLink="/create"
+    *ngIf="userAuthenticated"
+    routerLinkActive="mat-accent"
+  >
+    My application
+  </span>
+
+  <span class="spacer"></span>
+
+  <mat-icon
+    matBadge="{{ badgeValue }}"
+    matBadgeColor="warn"
+    routerLink="/"
+    routerLinkActive="mat-accent"
+    >message
+  </mat-icon>
+  <button
+    class="login"
+    *ngIf="!userAuthenticated"
+    mat-stroked-button
+    routerLink="/auth/login"
+    color="accent"
+  >
+    Login
+  </button>
+  <button
+    class="login"
+    *ngIf="!userAuthenticated"
+    mat-stroked-button
+    routerLink="/auth/signup"
+    color="accent"
+  >
+    SignUp
+  </button>
+  <button
+    class="login"
+    *ngIf="userAuthenticated"
+    (click) = 'onLogout()'
+    mat-stroked-button
+    color="accent"
+  >
+    Logout
+  </button>
+</mat-toolbar>

@@ -1,0 +1,31 @@
+mat-form-field,
+textarea{
+    display: block;
+    width: 40%;
+    margin: auto
+}
+
+button{
+    margin:auto;
+    display: block;    
+}
+
+mat-card{
+    width: 60%;
+    margin: auto
+}
+
+input[type='file']{
+    visibility: hidden;
+}
+
+.image-preview{
+    height: 60px;
+    
+}
+
+.image-preview img{
+    height: 100%;
+    margin: auto;
+    display: block
+}
